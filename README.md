@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 Hey 👋 Welcome to Sneh’s Products Portfolio 🚀
 
 I don’t just build products — I build possibilities.
