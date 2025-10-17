@@ -1,526 +1,424 @@
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Calendar,
-  Users,
-  TrendingUp,
-  Zap,
-  Target,
-  BarChart3,
-} from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code } from "lucide-react"
 
-export default function Portfolio() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="font-bold text-xl text-foreground">Sneh Shah</div>
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+                About
+              </a>
+              <a
+                href="#case-studies"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Case Studies
+              </a>
+              <a
+                href="#achievements"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Achievements
+              </a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+                Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 py-20 lg:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-                Sneh Shah
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-                Product Manager & AI Innovation Leader
-              </p>
-              <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">
-                Driving product excellence through data-driven decisions, AI automation, and cross-functional
-                leadership. Specialized in scaling SaaS products and building AI-powered solutions.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-              >
-                <MapPin className="w-4 h-4 mr-2" />
-                Chicago, IL
-              </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                312-545-4707
-              </Button>
-            </div>
-
-            <div className="flex justify-center gap-4">
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="mailto:sshah215@hawk.illinoistech.edu">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Email
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/snehshah74/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="https://github.com/snehshah74" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
-                </a>
-              </Button>
-            </div>
+      <section className="py-20 px-4 animate-fade-in">
+        <div className="container mx-auto text-center max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
+            AI-Powered Product Manager
+            <span className="text-primary block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Building the Future with Intelligence
+            </span>
+          </h1>
+          <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
+            I transform complex problems into intelligent product solutions, leveraging AI, data science, and
+            cross-functional leadership to deliver measurable impact across tech platforms.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              View Case Studies <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button
+              variant="link"
+              size="lg"
+              className="text-lg px-8 bg-transparent hover:bg-primary/5 border-2 hover:border-primary transition-all duration-300"
+            >
+              Download Resume
+            </Button>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    Product Manager with 4+ years of experience leading cross-functional teams and driving AI-powered
-                    product innovations. Currently pursuing Master's in Information Technology & Management at Illinois
-                    Institute of Technology with a $10,000 academic scholarship.
-                  </p>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    Proven track record of scaling SaaS products, reducing time-to-market by 40%, and generating over
-                    $10M in client annual sales. Passionate about leveraging AI and data analytics to solve complex
-                    business challenges.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <Target className="w-5 h-5 text-blue-600" />
-                      <span className="font-semibold text-gray-900">Product Strategy & Roadmapping</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-5 h-5 text-indigo-600" />
-                      <span className="font-semibold text-gray-900">Cross-functional Leadership</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <BarChart3 className="w-5 h-5 text-purple-600" />
-                      <span className="font-semibold text-gray-900">Data-Driven Decision Making</span>
-                    </div>
+      <section id="about" className="py-16 px-4 bg-gradient-to-br from-muted/30 to-accent/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h2 className="text-3xl font-bold mb-6">About Me</h2>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                I specialize in product management, driving the end-to-end lifecycle of innovative solutions that solve
+                complex business problems and deliver measurable impact.
+              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                From co-founding a startup that scaled 10X to $300K revenue to leading teams of 12+ professionals across
+                multiple SaaS products, My expertise lies in defining product vision, conducting user research,
+                prioritizing features, and driving go-to-market execution while balancing strategic goals with hands-on
+                execution..
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
+                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                    <Brain className="h-5 w-5 text-primary" />
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-blue-600" />
-                      <span className="font-semibold text-gray-900">AI & ML Integration</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <TrendingUp className="w-5 h-5 text-indigo-600" />
-                      <span className="font-semibold text-gray-900">SaaS Product Scaling</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-5 h-5 text-purple-600" />
-                      <span className="font-semibold text-gray-900">Agile & Scrum Methodologies</span>
-                    </div>
+                  <div>
+                    <div className="font-semibold">AI-Driven</div>
+                    <div className="text-sm text-muted-foreground">LLMs & ML Models</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
+                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Team Leadership</div>
+                    <div className="text-sm text-muted-foreground">Cross-functional Teams</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
+                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                    <BarChart3 className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Product/Data Analytics</div>
+                    <div className="text-sm text-muted-foreground">KPIs & Dashboards</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
+                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                    <Code className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">Product Strategy</div>
+                    <div className="text-sm text-muted-foreground">& Roadmapping</div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="relative animate-fade-in">
+              <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 flex items-center justify-center shadow-2xl rounded-3xl">
+                <img
+                  src="/images/design-mode/Screenshot%202025-10-16%20at%202.42.51%E2%80%AFAM.png"
+                  alt="Sneh Shah - Product Manager"
+                  className="w-100 h-95 object-cover rounded-xl shadow-lg text-justify"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="flex justify-center">
-                <div className="aspect-square bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 rounded-2xl flex items-center justify-center shadow-2xl">
+      {/* Case Studies Section */}
+      <section id="case-studies" className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">Featured Case Studies</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Real-world examples of AI-powered product solutions and cross-functional team leadership driving
+              measurable business impact.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cropped-IMG_3229-kmw4NDDoR0taSO4ggFnRyuN9SXIHQp.jpeg"
-                    alt="Sneh Shah - Product Manager"
-                    className="w-80 h-75 object-cover rounded-xl shadow-lg"
+                    src="/mobile-app-dashboard-interface.jpg"
+                    alt="AI Agent Automation"
+                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Professional Experience</h2>
-
-            <div className="space-y-8">
-              {/* Humanitarians AI */}
-              <Card className="border-l-4 border-l-blue-600 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-gray-900">Product Manager (Volunteer)</CardTitle>
-                      <CardDescription className="text-lg font-medium text-blue-600">Humanitarians AI</CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                      July 2025 - Present
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>
-                      • Leading a cross-functional team of 11 engineers and data scientists to design and deploy AI
-                      agents for crisis resource allocation
-                    </li>
-                    <li>• Built AI-driven decision support systems improving operational efficiency by 25%</li>
-                    <li>
-                      • Developed predictive models for optimal resource deployment based on real-time humanitarian
-                      operations data
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* JuliaHub */}
-              <Card className="border-l-4 border-l-indigo-600 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-gray-900">Product Manager Intern</CardTitle>
-                      <CardDescription className="text-lg font-medium text-indigo-600">JuliaHub Inc.</CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="bg-indigo-100 text-indigo-800">
-                      Aug 2024 - Feb 2025
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Designed customer onboarding process reducing onboarding time by 40%</li>
-                    <li>
-                      • Built scalable AI Agent automating Julia-based ML model deployment, reducing manual work by 60%
-                    </li>
-                    <li>
-                      • Conducted 25+ user interviews and developed AI-powered Code Analysis feature projected to save
-                      $3M in client churn
-                    </li>
-                    <li>• Executed A/B testing campaigns achieving 28% speedup in product launch</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* MindFire */}
-              <Card className="border-l-4 border-l-purple-600 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-gray-900">Product Manager Intern</CardTitle>
-                      <CardDescription className="text-lg font-medium text-purple-600">MindFire Inc.</CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="bg-purple-100 text-purple-800">
-                      Jun 2024 - Aug 2024
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>• Restructured internal data pipelines saving 15+ hours per week in data operations</li>
-                    <li>• Created KPI dashboards contributing to 10% increase in revenue and customer growth</li>
-                    <li>• Established strategic partnerships reducing time-to-market by 25%</li>
-                    <li>• Led AI assistant chatbot integration resulting in 45% reduction in support tickets</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Webvision Solution */}
-              <Card className="border-l-4 border-l-green-600 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-gray-900">Lead Product Manager</CardTitle>
-                      <CardDescription className="text-lg font-medium text-green-600">
-                        Webvision Solution Ltd.
-                      </CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="bg-green-100 text-green-800">
-                      Jan 2022 - Jul 2023
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>
-                      • Executed development of 9 SaaS products using Agile methodologies, reducing time-to-market by
-                      40%
-                    </li>
-                    <li>• Led diverse team of 12 professionals improving team productivity by 30%</li>
-                    <li>• Built KPI dashboards realizing 20% improvement in customer satisfaction metrics</li>
-                    <li>• Developed internal communication systems enhancing collaboration</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* GrowthCruise */}
-              <Card className="border-l-4 border-l-orange-600 shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl text-gray-900">Co-Founder & Lead Product Manager</CardTitle>
-                      <CardDescription className="text-lg font-medium text-orange-600">GrowthCruise</CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="bg-orange-100 text-orange-800">
-                      Sep 2020 - Jan 2022
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>
-                      • Defined product vision and roadmap for 25+ client solutions generating over $10M in client
-                      annual sales
-                    </li>
-                    <li>
-                      • Conducted user research and feedback analysis ensuring high adoption across digital products
-                    </li>
-                    <li>• Scaled company revenue 10X to $300K within the first year</li>
-                    <li>• Led end-to-end product development cycles reducing time-to-market by 30%</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl text-gray-900">AI Research Agent</CardTitle>
-                    <Badge className="bg-blue-600 text-white">AI/ML</Badge>
-                  </div>
-                  <CardDescription className="text-gray-600">Python, LangChain, OpenAI GPT, Pinecone</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    Built an autonomous research assistant that searches academic papers, extracts insights, and
-                    generates concise literature reviews. Reduced manual research time by 70% and increased productivity
-                    for data-driven decision-making.
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-blue-600 font-medium">
-                    <TrendingUp className="w-4 h-4" />
-                    70% reduction in research time
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl text-gray-900">Multi-Agent Workflow Orchestrator</CardTitle>
-                    <Badge className="bg-purple-600 text-white">AI Automation</Badge>
-                  </div>
-                  <CardDescription className="text-gray-600">LangGraph, OpenAI, VectorDB</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    Created a system of cooperating AI agents (research, analysis, and execution agents) that automated
-                    end-to-end workflows like report generation and data analysis. Reduced manual involvement by 80% for
-                    recurring business processes.
-                  </p>
-                  <div className="flex items-center gap-2 text-sm text-purple-600 font-medium">
-                    <Zap className="w-4 h-4" />
-                    80% automation of business processes
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Card className="text-center p-6 border-0 shadow-lg">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-lg text-gray-900">Tools & Platforms</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="outline">Excel</Badge>
-                    <Badge variant="outline">Tableau</Badge>
-                    <Badge variant="outline">Power BI</Badge>
-                    <Badge variant="outline">Salesforce</Badge>
-                    <Badge variant="outline">HubSpot</Badge>
-                    <Badge variant="outline">Azure</Badge>
-                    <Badge variant="outline">GCP</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center p-6 border-0 shadow-lg">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-lg text-gray-900">Programming</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="outline">Python</Badge>
-                    <Badge variant="outline">SQL</Badge>
-                    <Badge variant="outline">JavaScript</Badge>
-                    <Badge variant="outline">React</Badge>
-                    <Badge variant="outline">Node.js</Badge>
-                    <Badge variant="outline">Java</Badge>
-                    <Badge variant="outline">R</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center p-6 border-0 shadow-lg">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-lg text-gray-900">AI & Data</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="outline">LLMs</Badge>
-                    <Badge variant="outline">LangChain</Badge>
-                    <Badge variant="outline">RAG</Badge>
-                    <Badge variant="outline">Vector DB</Badge>
-                    <Badge variant="outline">ML</Badge>
-                    <Badge variant="outline">Generative AI</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center p-6 border-0 shadow-lg">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-lg text-gray-900">Product Management</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <Badge variant="outline">Agile</Badge>
-                    <Badge variant="outline">Scrum</Badge>
-                    <Badge variant="outline">JIRA</Badge>
-                    <Badge variant="outline">A/B Testing</Badge>
-                    <Badge variant="outline">User Research</Badge>
-                    <Badge variant="outline">PRDs</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Education</h2>
-
-            <Card className="border-l-4 border-l-blue-600 shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">
-                  Master's in Information Technology & Management
-                </CardTitle>
-                <CardDescription className="text-lg font-medium text-blue-600">
-                  Illinois Institute of Technology
-                </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-gray-600">Management Information Systems</span>
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                    Aug 2023 - May 2025
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Automation</Badge>
+                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                    Humanitarian Tech
                   </Badge>
                 </div>
-                <p className="text-gray-600">
-                  Awarded a $10,000 scholarship based on academics & extracurricular achievements
-                </p>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  AI Crisis Response System
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  Led team of 11 engineers and data scientists to design and deploy AI agents for Madison AI framework
+                  to transform data-driven marketing operations 25%.
+                </CardDescription>
+                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
+                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/saas-analytics-dashboard.jpg"
+                    alt="Julia ML Platform"
+                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">ML Platform</Badge>
+                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                    B2B SaaS
+                  </Badge>
+                </div>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  JuliaHub ML Automation
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  Built scalable AI agent that automated ML model deployment, reducing manual work by 60% and saving $3M
+                  in client churn.
+                </CardDescription>
+                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
+                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/ai-recommendation-interface.png"
+                    alt="Multi-Agent Workflow"
+                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Agents</Badge>
+                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                    Workflow Automation
+                  </Badge>
+                </div>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  Multi-Agent Orchestrator
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  Created cooperating AI agents system that automated end-to-end workflows, reducing manual involvement
+                  by 80%.
+                </CardDescription>
+                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
+                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Ready to drive product innovation and scale your business? Let's discuss how I can help.
+      {/* Achievements Section */}
+      <section id="achievements" className="py-16 px-4 bg-gradient-to-br from-muted/30 to-accent/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">Key Achievements</h2>
+            <p className="text-muted-foreground text-lg">
+              Measurable impact across AI product launches, team leadership, and business growth.
             </p>
+          </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="mailto:sshah215@hawk.illinoistech.edu">
-                  <Mail className="w-5 h-5 mr-2" />
-                  sshah215@hawk.illinoistech.edu
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/snehshah74/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-5 h-5 mr-2" />
-                  LinkedIn Profile
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-                asChild
-              >
-                <a href="https://github.com/snehshah74" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-5 h-5 mr-2" />
-                  GitHub Profile
-                </a>
-              </Button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                  $10M+
+                </div>
+                <div className="text-sm text-muted-foreground font-medium">Client Revenue Generated</div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                  25+
+                </div>
+                <div className="text-sm text-muted-foreground font-medium">Product Solutions</div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                  70%
+                </div>
+                <div className="text-sm text-muted-foreground font-medium">Research Time Reduction</div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+              <CardContent className="p-6">
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                  12+
+                </div>
+                <div className="text-sm text-muted-foreground font-medium">Team Members Led</div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12">
+            <h3 className="text-xl font-semibold mb-6 text-center">Career Timeline</h3>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">Product Manager - Humanitarians AI</div>
+                  <div className="text-sm text-muted-foreground mb-2">July 2025 - Present</div>
+                  <p className="text-sm text-muted-foreground">
+                    Leading cross-functional team of 11 engineers building AI agents to transform data-driven
+                    operations.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">Product Manager Intern - JuliaHub Inc.</div>
+                  <div className="text-sm text-muted-foreground mb-2">August 2024 - February 2025</div>
+                  <p className="text-sm text-muted-foreground">
+                    Designed customer onboarding process and built scalable AI features, conducting 25+ user interviews.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">Product Manager Intern - MindFire Inc.</div>
+                  <div className="text-sm text-muted-foreground mb-2"> June 2024 - August 2024</div>
+                  <p className="text-sm text-muted-foreground">
+                    Restructured data pipelines, built KPI dashboards, and launched AI chatbot integration reducing
+                    support tickets by 45%.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">Lead Product Manager - Webvision Solution Ltd.</div>
+                  <div className="text-sm text-muted-foreground mb-2">January 2022 - July 2023</div>
+                  <p className="text-sm text-muted-foreground">
+                    Executed development of 9 SaaS products using Agile methodologies, leading diverse team of 12
+                    professionals.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-muted-foreground rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">Co-Founder & Lead Product Manager - GrowthCruise</div>
+                  <div className="text-sm text-muted-foreground mb-2">September 2020 - January 2022</div>
+                  <p className="text-sm text-muted-foreground">
+                    Defined product vision for 20+ client solutions, scaling company revenue 10X to $300K within first
+                    year.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p className="text-gray-400">© 2024 Sneh Shah. Built with Next.js and Tailwind CSS.</p>
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4">
+        <div className="container mx-auto max-w-4xl text-center animate-fade-in">
+          <h2 className="text-3xl font-bold mb-4">Let's Build Something Great Together</h2>
+          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+            I'm always interested in discussing AI product opportunities, technical challenges, or sharing insights
+            about building intelligent solutions.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button
+              size="lg"
+              className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              asChild
+            >
+              <a href="mailto:sshah215@hawk.illinoistech.edu">
+                <Mail className="mr-2 h-5 w-5" />
+                Get In Touch
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 bg-transparent hover:bg-primary/5 border-2 hover:border-primary transition-all duration-300"
+            >
+              <a href="https://calendly.com/snehshah/60min?month=2025-09" target="_blank" rel="noopener noreferrer">
+                Schedule a Call
+              </a>
+            </Button>
           </div>
+
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://www.linkedin.com/in/snehshah74/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+            >
+              <Linkedin className="h-6 w-6 text-primary" />
+            </a>
+            <a
+              href="https://github.com/snehshah74"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+            >
+              <Github className="h-6 w-6 text-primary" />
+            </a>
+            <a
+              href="mailto:sshah215@hawk.illinoistech.edu"
+              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+            >
+              <Mail className="h-6 w-6 text-primary" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border py-8 px-4">
+        <div className="container mx-auto text-center">
+          <p className="text-muted-foreground">
+            © 2025 Sneh Shah. Built with passion for intelligent product experiences.
+          </p>
         </div>
       </footer>
     </div>
