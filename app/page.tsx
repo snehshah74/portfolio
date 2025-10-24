@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code } from "lucide-react"
+import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code, Download } from "lucide-react"
 
 export default function Home() {
   return (
@@ -59,8 +59,12 @@ export default function Home() {
               variant="link"
               size="lg"
               className="text-lg px-8 bg-transparent hover:bg-primary/5 border-2 hover:border-primary transition-all duration-300"
+              asChild
             >
-              Download Resume
+              <a href="/Sneh_Shah_Resume.pdf" download="Sneh_Shah_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
