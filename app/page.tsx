@@ -374,7 +374,7 @@ export default function Home() {
               className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
-              <a href="mailto:sshah215@hawk.illinoistech.edu">
+              <a href="mailto:snehshah741@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </a>
@@ -408,7 +408,7 @@ export default function Home() {
               <Github className="h-6 w-6 text-primary" />
             </a>
             <a
-              href="mailto:sshah215@hawk.illinoistech.edu"
+              href="mailto:snehshah741@gmail.com"
               className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
             >
               <Mail className="h-6 w-6 text-primary" />
