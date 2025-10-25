@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code, Download } from "lucide-react"
 
 export default function Home() {
@@ -27,9 +28,19 @@ export default function Home() {
               >
                 Achievements
               </a>
+              <a
+                href="#projects"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                Projects
+              </a>
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">
                 Contact
               </a>
+              <ThemeToggle />
+            </div>
+            <div className="md:hidden flex items-center">
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -39,21 +50,24 @@ export default function Home() {
       <section className="py-20 px-4 animate-fade-in">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
-            AI-Powered Product Manager
+            AI Product Manager & Agentic AI Specialist
             <span className="text-primary block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Building the Future with Intelligence
+              Building Intelligent Product Solutions
             </span>
           </h1>
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
-            I transform complex problems into intelligent product solutions, leveraging AI, data science, and
-            cross-functional leadership to deliver measurable impact across tech platforms.
+            Leading AI product strategy at Humanitarians AI, specializing in agentic AI platforms, workflow automation, 
+            and cross-functional team leadership to deliver measurable business impact across SaaS products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              asChild
             >
-              View Case Studies <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="#case-studies">
+                View Case Studies <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button
               variant="link"
@@ -77,14 +91,13 @@ export default function Home() {
             <div className="animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                I specialize in product management, driving the end-to-end lifecycle of innovative solutions that solve
-                complex business problems and deliver measurable impact.
+                I'm a Product Manager specializing in AI and Agentic AI platforms, currently leading product strategy 
+                at Humanitarians AI for Madison, an Agentic AI marketing intelligence platform.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                From co-founding a startup that scaled 10X to $300K revenue to leading teams of 12+ professionals across
-                multiple SaaS products, My expertise lies in defining product vision, conducting user research,
-                prioritizing features, and driving go-to-market execution while balancing strategic goals with hands-on
-                execution..
+                From co-founding GrowthCruise and scaling it 10X to $200K ARR to leading cross-functional teams of 8+ 
+                engineers at top-tier companies like JuliaHub and MindFire, I excel at defining product vision, 
+                conducting user research, and driving measurable business impact through AI-powered solutions.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -92,8 +105,8 @@ export default function Home() {
                     <Brain className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold">AI-Driven</div>
-                    <div className="text-sm text-muted-foreground">LLMs & ML Models</div>
+                    <div className="font-semibold">Agentic AI</div>
+                    <div className="text-sm text-muted-foreground">LangChain & LangGraph</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -102,7 +115,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold">Team Leadership</div>
-                    <div className="text-sm text-muted-foreground">Cross-functional Teams</div>
+                    <div className="text-sm text-muted-foreground">8+ Engineers</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -110,8 +123,8 @@ export default function Home() {
                     <BarChart3 className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold">Product/Data Analytics</div>
-                    <div className="text-sm text-muted-foreground">KPIs & Dashboards</div>
+                    <div className="font-semibold">Product Analytics</div>
+                    <div className="text-sm text-muted-foreground">A/B Testing & KPIs</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -119,8 +132,8 @@ export default function Home() {
                     <Code className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold">Product Strategy</div>
-                    <div className="text-sm text-muted-foreground">& Roadmapping</div>
+                    <div className="font-semibold">AI Workflows</div>
+                    <div className="text-sm text-muted-foreground">n8n & Automation</div>
                   </div>
                 </div>
               </div>
@@ -170,11 +183,11 @@ export default function Home() {
                   </Badge>
                 </div>
                 <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  AI Crisis Response System
+                  Madison AI Platform
                 </CardTitle>
                 <CardDescription className="mb-4 leading-relaxed">
-                  Led team of 11 engineers and data scientists to design and deploy AI agents for Madison AI framework
-                  to transform data-driven marketing operations 25%.
+                  Leading product strategy for Madison, an Agentic AI marketing intelligence platform, managing 8 engineers 
+                  to build agent orchestration and workflow automation with 25% accuracy improvement.
                 </CardDescription>
                 <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
                   Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
@@ -200,11 +213,11 @@ export default function Home() {
                   </Badge>
                 </div>
                 <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  JuliaHub ML Automation
+                  JuliaHub AI Assistant
                 </CardTitle>
                 <CardDescription className="mb-4 leading-relaxed">
-                  Built scalable AI agent that automated ML model deployment, reducing manual work by 60% and saving $3M
-                  in client churn.
+                  Developed AI-powered deployment assistant that automated 3 manual configuration steps, reducing deployment 
+                  time from 5 hours to 2 hours per model and increasing MAUs by 20%.
                 </CardDescription>
                 <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
                   Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
@@ -230,11 +243,11 @@ export default function Home() {
                   </Badge>
                 </div>
                 <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  Multi-Agent Orchestrator
+                  GrowthCruise Scaling
                 </CardTitle>
                 <CardDescription className="mb-4 leading-relaxed">
-                  Created cooperating AI agents system that automated end-to-end workflows, reducing manual involvement
-                  by 80%.
+                  Co-founded and scaled GrowthCruise 10X from $20K to $200K ARR, managing 25+ client projects across 
+                  e-commerce and SaaS domains with $2M+ collective annual revenue.
                 </CardDescription>
                 <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
                   Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
@@ -359,6 +372,134 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              AI-powered projects showcasing expertise in agentic AI, observability platforms, and intelligent systems.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <div className="text-center p-6">
+                    <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-primary">AgentLens</h3>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Observability</Badge>
+                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                    Real-time Monitoring
+                  </Badge>
+                </div>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  AI Observability Platform
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  Monitor and optimize AI agents with real-time tracing and AI-powered insights for better performance and reliability.
+                </CardDescription>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://agent-lens-ai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      Website
+                    </a>
+                  </Button>
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://github.com/snehshah74/AgentLens" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-1" />
+                      GitHub
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <div className="text-center p-6">
+                    <BarChart3 className="h-12 w-12 text-accent mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-accent">Molecular Nutrition AI</h3>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-accent text-accent-foreground border-0 font-medium">Health Tech</Badge>
+                  <Badge variant="outline" className="border-primary/50 text-primary font-medium">
+                    AI Analysis
+                  </Badge>
+                </div>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  Molecular Nutrition Analysis
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  AI system that analyzes nutrition at the molecular level using data on genes and nutrients for personalized health insights.
+                </CardDescription>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://molecularnutritionai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      Website
+                    </a>
+                  </Button>
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://github.com/snehshah74/Molecular-Nutrition-AI" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-1" />
+                      GitHub
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+              <CardHeader className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                  <div className="text-center p-6">
+                    <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-primary">ConversaAI</h3>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">Voice AI</Badge>
+                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                    Customer Support
+                  </Badge>
+                </div>
+                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
+                  Conversational Voice AI Platform
+                </CardTitle>
+                <CardDescription className="mb-4 leading-relaxed">
+                  Create and manage conversational Voice AI agents for customer support, sales, and automated interactions.
+                </CardDescription>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://conversa-voiceai.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      Website
+                    </a>
+                  </Button>
+                  <Button size="sm" variant="outline" asChild>
+                    <a href="https://github.com/snehshah74/ConversaAI" target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-1" />
+                      GitHub
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center animate-fade-in">
@@ -421,7 +562,7 @@ export default function Home() {
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 Sneh Shah. Built with passion for intelligent product experiences.
+            © 2025 Sneh Shah. 
           </p>
         </div>
       </footer>
