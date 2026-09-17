@@ -1,15 +1,19 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code, Download } from "lucide-react"
+import { MobileNav } from "@/components/mobile-nav"
+import { CaseStudyCard } from "@/components/case-study-card"
+import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code, Download, Building2 } from "lucide-react"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4 relative">
           <div className="flex items-center justify-between">
             <div className="font-bold text-xl text-foreground">Sneh Shah</div>
             <div className="hidden md:flex items-center space-x-6">
@@ -39,8 +43,9 @@ export default function Home() {
               </a>
               <ThemeToggle />
             </div>
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center gap-1">
               <ThemeToggle />
+              <MobileNav />
             </div>
           </div>
         </div>
@@ -56,8 +61,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
-            Leading AI product strategy at Humanitarians AI, specializing in agentic AI platforms, workflow automation, 
-            and cross-functional team leadership to deliver measurable business impact across SaaS products.
+            Shipping agentic AI platforms and enterprise AI implementations — from cutting AI hallucination rates in
+            half for finance workflows to building AI evaluation infrastructure for commercial real estate — with a
+            track record of measurable business impact across AI and SaaS products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -91,13 +97,14 @@ export default function Home() {
             <div className="animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                I'm a Product Manager specializing in AI and Agentic AI platforms, currently leading product strategy 
-                at Humanitarians AI for Madison, an Agentic AI marketing intelligence platform.
+                I'm a Product Manager specializing in AI and Agentic AI platforms. Most recently, I led 0→1 development
+                of Mycroft, an AI workflow platform for finance teams at Humanitarians AI, and delivered enterprise AI
+                implementations as a Technical Program Manager at CohesionIB.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                From co-founding GrowthCruise and scaling it 10X to $200K ARR to leading cross-functional teams of 8+ 
-                engineers at top-tier companies like JuliaHub and MindFire, I excel at defining product vision, 
-                conducting user research, and driving measurable business impact through AI-powered solutions.
+                From co-founding GrowthCruise and scaling it 10X to $300K ARR, to cutting AI hallucination rates
+                in half at Humanitarians AI, to leading cross-functional teams at JuliaHub, MindFire, and Webvision,
+                I excel at defining product vision, shipping agentic AI systems, and driving measurable business impact.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -115,7 +122,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="font-semibold">Team Leadership</div>
-                    <div className="text-sm text-muted-foreground">8+ Engineers</div>
+                    <div className="text-sm text-muted-foreground">9+ Professionals</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
@@ -141,9 +148,9 @@ export default function Home() {
             <div className="relative animate-fade-in">
               <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 flex items-center justify-center shadow-2xl rounded-3xl">
                 <img
-                  src="/images/design-mode/Screenshot%202025-10-16%20at%202.42.51%E2%80%AFAM.png"
-                  alt="Sneh Shah - Product Manager"
-                  className="w-100 h-95 object-cover rounded-xl shadow-lg text-justify"
+                  src="/images/profile/sneh-shah.png"
+                  alt="Portrait of Sneh Shah, AI Product Manager"
+                  className="w-100 h-95 object-cover rounded-xl shadow-lg"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-xl"></div>
@@ -165,95 +172,35 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
-              <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/mobile-app-dashboard-interface.jpg"
-                    alt="AI Agent Automation"
-                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Automation</Badge>
-                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
-                    Humanitarian Tech
-                  </Badge>
-                </div>
-                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  Madison AI Platform
-                </CardTitle>
-                <CardDescription className="mb-4 leading-relaxed">
-                  Leading product strategy for Madison, an Agentic AI marketing intelligence platform, managing 8 engineers 
-                  to build agent orchestration and workflow automation with 25% accuracy improvement.
-                </CardDescription>
-                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
-                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
-                </div>
-              </CardContent>
-            </Card>
+            <CaseStudyCard
+              icon={Building2}
+              badges={[{ label: "AI Infrastructure" }, { label: "Commercial Real Estate", variant: "outline" }]}
+              title="Savvy AI @ CohesionIB"
+              description="Led 3 end-to-end enterprise CRE implementations and built an MCP server integrating real-time building data into the Savvy AI platform, plus 20+ AI evaluation datasets powering 500+ evaluation experiments."
+              role="Implementation/Technical Program Manager at CohesionIB (Apr 2026–Sep 2026), owning technical delivery across access control configuration, API/SSO integrations, and cross-functional coordination."
+              approach="Built 15+ Databricks pipelines and an MCP server to replace static reporting with live, queryable building data, then shipped 4 client-facing AI capabilities including AI-generated portfolio insights and branded report exports. Built and maintained 20+ curated AI evaluation datasets covering real-world CRE use cases and edge cases."
+              outcome="Reduced go-live time by 20% across 3 enterprise implementations and established standardized AI benchmarking across product iterations via 500+ evaluation experiments."
+            />
 
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
-              <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/10 rounded-t-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/saas-analytics-dashboard.jpg"
-                    alt="Julia ML Platform"
-                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">ML Platform</Badge>
-                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
-                    B2B SaaS
-                  </Badge>
-                </div>
-                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  JuliaHub AI Assistant
-                </CardTitle>
-                <CardDescription className="mb-4 leading-relaxed">
-                  Developed AI-powered deployment assistant that automated 3 manual configuration steps, reducing deployment 
-                  time from 5 hours to 2 hours per model and increasing MAUs by 20%.
-                </CardDescription>
-                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
-                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
-                </div>
-              </CardContent>
-            </Card>
+            <CaseStudyCard
+              icon={Brain}
+              badges={[{ label: "Agentic AI" }, { label: "FinTech", variant: "outline" }]}
+              title="Mycroft AI Workflow Platform"
+              description="Led 0→1 development of Mycroft, an AI workflow platform for finance teams, reducing hallucination rate from 22% to 11% and improving autonomous task completion from 78% to 89%."
+              role="AI Product Manager at Humanitarians AI (Jul 2025–Apr 2026), leading 0→1 product development for Mycroft and orchestrating multi-agent workflows for portfolio analytics, risk modeling, and financial statement intelligence."
+              approach="Built an agent observability dashboard tracking 3 KPIs — task success, reasoning quality, and latency — to diagnose failure modes in financial query workflows and iterate on agent reasoning and guardrails."
+              outcome="Cut AI hallucination rate from 22% to 11%, improved autonomous task completion from 78% to 89%, and maintained a 95% autonomous rate on production workflows."
+            />
 
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
-              <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/ai-recommendation-interface.png"
-                    alt="Multi-Agent Workflow"
-                    className="w-full h-full object-cover rounded-t-lg group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Agents</Badge>
-                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
-                    Workflow Automation
-                  </Badge>
-                </div>
-                <CardTitle className="mb-2 group-hover:text-primary transition-colors">
-                  GrowthCruise Scaling
-                </CardTitle>
-                <CardDescription className="mb-4 leading-relaxed">
-                  Co-founded and scaled GrowthCruise 10X from $20K to $200K ARR, managing 25+ client projects across 
-                  e-commerce and SaaS domains with $2M+ collective annual revenue.
-                </CardDescription>
-                <div className="flex items-center text-sm text-primary font-medium group-hover:translate-x-2 transition-transform">
-                  Read Case Study <ArrowRight className="ml-1 h-4 w-4" />
-                </div>
-              </CardContent>
-            </Card>
+            <CaseStudyCard
+              icon={Code}
+              badges={[{ label: "ML Platform" }, { label: "B2B SaaS", variant: "outline" }]}
+              title="JuliaHub AI Assistant"
+              description="Retained $1.3M in ARR by shipping AI-powered code analysis APIs, and redesigned the onboarding flow to cut time-to-first-success by 70%."
+              role="AI Product Manager Intern at JuliaHub Inc. (Aug 2024–Feb 2025), owning SDK integration requirements and the developer onboarding journey for a developer platform."
+              approach="Validated SDK integration requirements through 25+ user interviews, redesigned the onboarding flow, and ran A/B tests across 4 features with 2,000+ users to raise experiment win rate."
+              outcome="Retained $1.3M in ARR and cut enterprise churn from 8.4% to 6.0%, cut time-to-first-success from 3 hours to 45 minutes (70% faster) while growing MAUs by 20%, and raised experiment win rate from 18% to 29%."
+            />
           </div>
         </div>
       </section>
@@ -272,7 +219,7 @@ export default function Home() {
             <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
               <CardContent className="p-6">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                  $10M+
+                  $5M+
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">Client Revenue Generated</div>
               </CardContent>
@@ -281,9 +228,9 @@ export default function Home() {
             <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
               <CardContent className="p-6">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                  25+
+                  15+
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">Product Solutions</div>
+                <div className="text-sm text-muted-foreground font-medium">Client Projects Delivered</div>
               </CardContent>
             </Card>
 
@@ -292,16 +239,16 @@ export default function Home() {
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
                   70%
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">Research Time Reduction</div>
+                <div className="text-sm text-muted-foreground font-medium">Faster Time-to-Onboard</div>
               </CardContent>
             </Card>
 
             <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
               <CardContent className="p-6">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                  12+
+                  500+
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">Team Members Led</div>
+                <div className="text-sm text-muted-foreground font-medium">AI Evaluation Experiments Run</div>
               </CardContent>
             </Card>
           </div>
@@ -312,11 +259,11 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <div className="w-3 h-3 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <div className="font-semibold">Product Manager - Humanitarians AI</div>
-                  <div className="text-sm text-muted-foreground mb-2">July 2025 - Present</div>
+                  <div className="font-semibold">Implementation/Technical Program Manager - CohesionIB</div>
+                  <div className="text-sm text-muted-foreground mb-2">April 2026 - September 2026</div>
                   <p className="text-sm text-muted-foreground">
-                    Leading cross-functional team of 11 engineers building AI agents to transform data-driven
-                    operations.
+                    Led 3 end-to-end enterprise CRE implementations and built an MCP server integrating real-time
+                    building data into the Savvy AI platform, reducing go-live time by 20%.
                   </p>
                 </div>
               </div>
@@ -324,10 +271,23 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <div className="font-semibold">Product Manager Intern - JuliaHub Inc.</div>
+                  <div className="font-semibold">AI Product Manager - Humanitarians AI</div>
+                  <div className="text-sm text-muted-foreground mb-2">July 2025 - April 2026</div>
+                  <p className="text-sm text-muted-foreground">
+                    Led 0→1 development of Mycroft, an AI workflow platform for finance teams, reducing hallucination
+                    rate from 22% to 11% and improving autonomous task completion from 78% to 89%.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <div className="font-semibold">AI Product Manager Intern - JuliaHub Inc.</div>
                   <div className="text-sm text-muted-foreground mb-2">August 2024 - February 2025</div>
                   <p className="text-sm text-muted-foreground">
-                    Designed customer onboarding process and built scalable AI features, conducting 25+ user interviews.
+                    Retained $1.3M in ARR shipping AI-powered code analysis APIs and redesigned onboarding, cutting
+                    time-to-first-success by 70%.
                   </p>
                 </div>
               </div>
@@ -336,10 +296,10 @@ export default function Home() {
                 <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
                   <div className="font-semibold">Product Manager Intern - MindFire Inc.</div>
-                  <div className="text-sm text-muted-foreground mb-2"> June 2024 - August 2024</div>
+                  <div className="text-sm text-muted-foreground mb-2">June 2024 - August 2024</div>
                   <p className="text-sm text-muted-foreground">
-                    Restructured data pipelines, built KPI dashboards, and launched AI chatbot integration reducing
-                    support tickets by 45%.
+                    Built KPI dashboards and launched an AI chatbot for 9,000+ DAUs, reducing support tickets by 30%
+                    and raising CSAT from 4.1 to 4.6/5.
                   </p>
                 </div>
               </div>
@@ -347,11 +307,11 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <div className="w-3 h-3 bg-accent rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <div className="font-semibold">Lead Product Manager - Webvision Solution Ltd.</div>
+                  <div className="font-semibold">Product Manager - Webvision Solution Ltd.</div>
                   <div className="text-sm text-muted-foreground mb-2">January 2022 - July 2023</div>
                   <p className="text-sm text-muted-foreground">
-                    Executed development of 9 SaaS products using Agile methodologies, leading diverse team of 12
-                    professionals.
+                    Led development of 6 SaaS products and managed a cross-functional team of 9, improving NPS from 47
+                    to 63 and growing feature adoption from 31% to 56%.
                   </p>
                 </div>
               </div>
@@ -359,11 +319,11 @@ export default function Home() {
               <div className="flex items-start gap-4">
                 <div className="w-3 h-3 bg-muted-foreground rounded-full mt-2 flex-shrink-0"></div>
                 <div>
-                  <div className="font-semibold">Co-Founder & Lead Product Manager - GrowthCruise</div>
-                  <div className="text-sm text-muted-foreground mb-2">September 2020 - January 2022</div>
+                  <div className="font-semibold">Co-Founder & Product Manager - GrowthCruise</div>
+                  <div className="text-sm text-muted-foreground mb-2">September 2019 - January 2022</div>
                   <p className="text-sm text-muted-foreground">
-                    Defined product vision for 20+ client solutions, scaling company revenue 10X to $300K within first
-                    year.
+                    Owned product strategy for 15+ client projects generating $5M+ in collective annual revenue,
+                    scaling GrowthCruise 10X to $300K ARR within the first year.
                   </p>
                 </div>
               </div>
@@ -524,8 +484,9 @@ export default function Home() {
               variant="outline"
               size="lg"
               className="text-lg px-8 bg-transparent hover:bg-primary/5 border-2 hover:border-primary transition-all duration-300"
+              asChild
             >
-              <a href="https://calendly.com/snehshah/60min?month=2025-09" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/snehshah/60min" target="_blank" rel="noopener noreferrer">
                 Schedule a Call
               </a>
             </Button>
@@ -562,7 +523,7 @@ export default function Home() {
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 Sneh Shah. 
+            © 2026 Sneh Shah.
           </p>
         </div>
       </footer>
