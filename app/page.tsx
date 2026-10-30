@@ -56,9 +56,6 @@ export default function Home() {
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
             AI Product Manager & Agentic AI Specialist
-            <span className="text-primary block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Building Intelligent Product Solutions
-            </span>
           </h1>
           <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
             Shipping agentic AI platforms and enterprise AI implementations — from cutting AI hallucination rates in
@@ -68,7 +65,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 shadow-sm hover:shadow-md transition-all duration-300"
               asChild
             >
               <a href="#case-studies">
@@ -91,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4 bg-gradient-to-br from-muted/30 to-accent/5">
+      <section id="about" className="py-16 px-4 bg-muted/40">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -107,8 +104,8 @@ export default function Home() {
                 I excel at defining product vision, shipping agentic AI systems, and driving measurable business impact.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
-                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="p-2 bg-primary/10 rounded-lg">
                     <Brain className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -116,8 +113,8 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">LangChain & LangGraph</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
-                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="p-2 bg-primary/10 rounded-lg">
                     <Users className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -125,8 +122,8 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">9+ Professionals</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
-                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="p-2 bg-primary/10 rounded-lg">
                     <BarChart3 className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -134,8 +131,8 @@ export default function Home() {
                     <div className="text-sm text-muted-foreground">A/B Testing & KPIs</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-card hover:bg-primary/5 transition-colors">
-                  <div className="p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg">
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="p-2 bg-primary/10 rounded-lg">
                     <Code className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -146,15 +143,13 @@ export default function Home() {
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 flex items-center justify-center shadow-2xl rounded-3xl">
+              <div className="aspect-square border border-border bg-muted/30 flex items-center justify-center rounded-2xl overflow-hidden">
                 <img
                   src="/images/profile/sneh-shah.png"
                   alt="Portrait of Sneh Shah, AI Product Manager"
-                  className="w-100 h-95 object-cover rounded-xl shadow-lg"
+                  className="w-100 h-95 object-cover rounded-xl"
                 />
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-accent/30 to-primary/30 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
@@ -206,7 +201,7 @@ export default function Home() {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-16 px-4 bg-gradient-to-br from-muted/30 to-accent/5">
+      <section id="achievements" className="py-16 px-4 bg-muted/40">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl font-bold mb-4">Key Achievements</h2>
@@ -216,36 +211,36 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+            <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-primary mb-2">
                   $5M+
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">Client Revenue Generated</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+            <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-primary mb-2">
                   15+
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">Client Projects Delivered</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+            <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-primary mb-2">
                   70%
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">Faster Time-to-Onboard</div>
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-0 bg-gradient-to-br from-card to-primary/5 hover:scale-105">
+            <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-primary mb-2">
                   500+
                 </div>
                 <div className="text-sm text-muted-foreground font-medium">AI Evaluation Experiments Run</div>
@@ -343,9 +338,9 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+            <Card className="group border border-border bg-card hover:shadow-md transition-all duration-300 cursor-pointer">
               <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                <div className="aspect-video bg-primary/5 rounded-t-lg flex items-center justify-center overflow-hidden">
                   <div className="text-center p-6">
                     <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-primary">AgentLens</h3>
@@ -355,7 +350,7 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Badge className="bg-primary text-primary-foreground border-0 font-medium">AI Observability</Badge>
-                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                  <Badge variant="outline" className="border-border text-muted-foreground font-medium">
                     Real-time Monitoring
                   </Badge>
                 </div>
@@ -381,19 +376,19 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+            <Card className="group border border-border bg-card hover:shadow-md transition-all duration-300 cursor-pointer">
               <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                <div className="aspect-video bg-primary/5 rounded-t-lg flex items-center justify-center overflow-hidden">
                   <div className="text-center p-6">
-                    <BarChart3 className="h-12 w-12 text-accent mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-accent">Molecular Nutrition AI</h3>
+                    <BarChart3 className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-primary">Molecular Nutrition AI</h3>
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  <Badge className="bg-accent text-accent-foreground border-0 font-medium">Health Tech</Badge>
-                  <Badge variant="outline" className="border-primary/50 text-primary font-medium">
+                  <Badge className="bg-primary text-primary-foreground border-0 font-medium">Health Tech</Badge>
+                  <Badge variant="outline" className="border-border text-muted-foreground font-medium">
                     AI Analysis
                   </Badge>
                 </div>
@@ -419,9 +414,9 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer border-0 bg-gradient-to-br from-card to-muted/30 hover:scale-105">
+            <Card className="group border border-border bg-card hover:shadow-md transition-all duration-300 cursor-pointer">
               <CardHeader className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden">
+                <div className="aspect-video bg-primary/5 rounded-t-lg flex items-center justify-center overflow-hidden">
                   <div className="text-center p-6">
                     <Users className="h-12 w-12 text-primary mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-primary">ConversaAI</h3>
@@ -431,7 +426,7 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Badge className="bg-primary text-primary-foreground border-0 font-medium">Voice AI</Badge>
-                  <Badge variant="outline" className="border-accent/50 text-accent font-medium">
+                  <Badge variant="outline" className="border-border text-muted-foreground font-medium">
                     Customer Support
                   </Badge>
                 </div>
@@ -472,7 +467,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
               size="lg"
-              className="text-lg px-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 shadow-sm hover:shadow-md transition-all duration-300"
               asChild
             >
               <a href="mailto:snehshah741@gmail.com">
@@ -497,7 +492,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/snehshah74/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+              className="p-4 border border-border rounded-xl hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
               <Linkedin className="h-6 w-6 text-primary" />
             </a>
@@ -505,13 +500,13 @@ export default function Home() {
               href="https://github.com/snehshah74"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+              className="p-4 border border-border rounded-xl hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
               <Github className="h-6 w-6 text-primary" />
             </a>
             <a
               href="mailto:snehshah741@gmail.com"
-              className="p-4 bg-gradient-to-br from-muted to-primary/10 rounded-xl hover:from-primary/10 hover:to-accent/10 hover:shadow-lg transition-all duration-300 hover:scale-110"
+              className="p-4 border border-border rounded-xl hover:border-primary hover:bg-primary/5 transition-all duration-300"
             >
               <Mail className="h-6 w-6 text-primary" />
             </a>

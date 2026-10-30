@@ -19,9 +19,9 @@ export function CaseStudyCard({ icon: Icon, badges, title, description, role, ap
   const [open, setOpen] = React.useState(false)
 
   return (
-    <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-0 bg-gradient-to-br from-card to-muted/30">
+    <Card className="group border border-border bg-card hover:shadow-md transition-all duration-300">
       <CardHeader className="p-0">
-        <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
+        <div className="aspect-video bg-primary/5 rounded-t-lg flex items-center justify-center">
           <Icon className="h-14 w-14 text-primary" />
         </div>
       </CardHeader>
@@ -29,7 +29,7 @@ export function CaseStudyCard({ icon: Icon, badges, title, description, role, ap
         <div className="flex items-center gap-2 mb-3 flex-wrap">
           {badges.map((b) =>
             b.variant === 'outline' ? (
-              <Badge key={b.label} variant="outline" className="border-accent/50 text-accent font-medium">
+              <Badge key={b.label} variant="outline" className="border-border text-muted-foreground font-medium">
                 {b.label}
               </Badge>
             ) : (
