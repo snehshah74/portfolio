@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { Menu, X } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -11,7 +12,11 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ]
 
-export function MobileNav() {
+interface MobileNavProps {
+  activeSection?: string | null
+}
+
+export function MobileNav({ activeSection }: MobileNavProps) {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -32,16 +37,23 @@ export function MobileNav() {
           id="mobile-nav-menu"
           className="absolute left-0 right-0 top-full border-b border-border bg-background px-4 py-2 flex flex-col shadow-lg animate-fade-in"
         >
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="py-3 px-2 rounded-md text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors font-medium"
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const id = link.href.slice(1)
+            const isActive = activeSection === id
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  'py-3 px-2 rounded-md transition-colors font-medium',
+                  isActive ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-primary hover:bg-muted/50',
+                )}
+              >
+                {link.label}
+              </a>
+            )
+          })}
         </div>
       )}
     </div>

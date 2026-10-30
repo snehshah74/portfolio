@@ -6,9 +6,23 @@ import { Badge } from "@/components/ui/badge"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { MobileNav } from "@/components/mobile-nav"
 import { CaseStudyCard } from "@/components/case-study-card"
+import { StatCounter } from "@/components/stat-counter"
+import { useScrollSpy } from "@/lib/use-scroll-spy"
+import { cn } from "@/lib/utils"
 import { ArrowRight, BarChart3, Users, Mail, Linkedin, Github, Brain, Code, Download, Building2 } from "lucide-react"
 
+const NAV_SECTIONS = [
+  { id: "about", label: "About" },
+  { id: "case-studies", label: "Case Studies" },
+  { id: "achievements", label: "Achievements" },
+  { id: "projects", label: "Projects" },
+  { id: "contact", label: "Contact" },
+]
+const NAV_SECTION_IDS = NAV_SECTIONS.map((s) => s.id)
+
 export default function Home() {
+  const activeSection = useScrollSpy(NAV_SECTION_IDS)
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -17,35 +31,25 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="font-bold text-xl text-foreground">Sneh Shah</div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors font-medium">
-                About
-              </a>
-              <a
-                href="#case-studies"
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                Case Studies
-              </a>
-              <a
-                href="#achievements"
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                Achievements
-              </a>
-              <a
-                href="#projects"
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                Projects
-              </a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors font-medium">
-                Contact
-              </a>
+              {NAV_SECTIONS.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className={cn(
+                    "transition-colors font-medium",
+                    activeSection === section.id
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary",
+                  )}
+                >
+                  {section.label}
+                </a>
+              ))}
               <ThemeToggle />
             </div>
             <div className="md:hidden flex items-center gap-1">
               <ThemeToggle />
-              <MobileNav />
+              <MobileNav activeSection={activeSection} />
             </div>
           </div>
         </div>
@@ -213,36 +217,28 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">
-                  $5M+
-                </div>
+                <StatCounter value="$5M+" className="text-3xl font-bold text-primary mb-2" />
                 <div className="text-sm text-muted-foreground font-medium">Client Revenue Generated</div>
               </CardContent>
             </Card>
 
             <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">
-                  15+
-                </div>
+                <StatCounter value="15+" className="text-3xl font-bold text-primary mb-2" />
                 <div className="text-sm text-muted-foreground font-medium">Client Projects Delivered</div>
               </CardContent>
             </Card>
 
             <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">
-                  70%
-                </div>
+                <StatCounter value="70%" className="text-3xl font-bold text-primary mb-2" />
                 <div className="text-sm text-muted-foreground font-medium">Faster Time-to-Onboard</div>
               </CardContent>
             </Card>
 
             <Card className="text-center border border-border bg-card hover:shadow-md transition-all duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">
-                  500+
-                </div>
+                <StatCounter value="500+" className="text-3xl font-bold text-primary mb-2" />
                 <div className="text-sm text-muted-foreground font-medium">AI Evaluation Experiments Run</div>
               </CardContent>
             </Card>
